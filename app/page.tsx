@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import MintButton from "@/components/MintButton"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
@@ -57,8 +57,10 @@ export default function NFTMintPage() {
                   for gasless transactions.
                 </span>
               </li>
-
             </ul>
+
+            <MintButton />
+
           </div>
         </div>
 
@@ -79,25 +81,10 @@ export default function NFTMintPage() {
                   quality={100}
                   src="/abs.png"
                   alt="Emerald Whispers NFT"
+                  priority
                   className="w-full h-full object-cover relative z-10"
                 />
               </div>
-
-              <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-green-400 to-emerald-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-                <Button
-                  className="relative w-full px-8 py-3 bg-black rounded-full leading-none flex items-center justify-center space-x-5"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-green-500 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-white font-semibold">Mint Your NFT</span>
-                </Button>
-              </div>
-
-              <p className="text-sm text-muted-foreground mt-4 sm:mt-6 text-center text-gray-400">
-                Limited edition. Only 100 available.
-              </p>
             </CardContent>
           </Card>
         </div>
